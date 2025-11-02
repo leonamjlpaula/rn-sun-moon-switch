@@ -4,7 +4,7 @@
   "description": "A beautiful animated sun/moon toggle switch component for React Native",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
-  "react-native": "src/index.ts",
+  "react-native": "dist/index.esm.js",
   "types": "dist/index.d.ts",
   "files": [
     "dist",
