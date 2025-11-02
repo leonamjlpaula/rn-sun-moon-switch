@@ -1,7 +1,7 @@
 import React, { useMemo } from "react";
 import { View, ViewStyle } from "react-native";
 import Animated, {
-  AnimateStyle,
+  AnimatedStyle,
   SharedValue,
   interpolateColor,
   useAnimatedStyle,
@@ -40,7 +40,7 @@ export const Star = ({
     []
   );
 
-  const circle1 = useMemo<AnimateStyle<ViewStyle>>(
+  const circle1 = useMemo<AnimatedStyle<ViewStyle>>(
     () => ({
       width: size,
       height: size,
@@ -51,7 +51,7 @@ export const Star = ({
     }),
     []
   );
-  const circle2 = useMemo<AnimateStyle<ViewStyle>>(
+  const circle2 = useMemo<AnimatedStyle<ViewStyle>>(
     () => ({
       width: size,
       height: size,
@@ -62,7 +62,7 @@ export const Star = ({
     }),
     []
   );
-  const circle3 = useMemo<AnimateStyle<ViewStyle>>(
+  const circle3 = useMemo<AnimatedStyle<ViewStyle>>(
     () => ({
       width: size,
       height: size,
@@ -73,7 +73,7 @@ export const Star = ({
     }),
     []
   );
-  const circle4 = useMemo<AnimateStyle<ViewStyle>>(
+  const circle4 = useMemo<AnimatedStyle<ViewStyle>>(
     () => ({
       width: size,
       height: size,

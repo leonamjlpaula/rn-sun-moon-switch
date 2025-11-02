@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyleSheet, View } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
-import { SunMoonSwitch } from './src/components';
+import { SunMoonSwitch } from 'rn-sun-moon-switch';
 
 export default function App() {
   return (

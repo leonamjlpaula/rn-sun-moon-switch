@@ -1,5 +1,7 @@
 node_modules/
+examples/node_modules/
 .expo/
+.expo-shared/
 dist/
 npm-debug.*
 *.jks
@@ -12,3 +14,14 @@ web-build/
 
 # macOS
 .DS_Store
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs
+*.log
+yarn-debug.log*
+yarn-error.log*
