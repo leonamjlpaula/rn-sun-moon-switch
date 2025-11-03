@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "A beautiful animated sun/moon toggle switch component for React Native",
   "main": "dist/index.js",
+  "author": "Leonam de Paula <leonamjlpaula@gmail.com>",
   "module": "dist/index.esm.js",
   "react-native": "dist/index.esm.js",
   "types": "dist/index.d.ts",
@@ -25,14 +26,21 @@
     "animated",
     "reanimated",
     "ui",
-    "component"
+    "component",
+    "theme",
+    "dark-mode",
+    "light-mode",
+    "theme-switcher"
   ],
-  "author": "",
   "license": "MIT",
   "repository": {
     "type": "git",
     "url": ""
   },
+  "bugs": {
+    "url": "https://github.com/yourusername/rn-sun-moon-switch/issues"
+  },
+  "homepage": "https://github.com/yourusername/rn-sun-moon-switch#readme",
   "peerDependencies": {
     "react": "*",
     "react-native": "*",
