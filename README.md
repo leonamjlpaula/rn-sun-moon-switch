@@ -64,19 +64,92 @@ const styles = StyleSheet.create({
 
 ## 📖 Usage
 
-The `SunMoonSwitch` component is a fully self-contained toggle switch. Simply import and use it:
+### Basic Usage (Uncontrolled)
+
+The component can manage its own state:
 
 ```tsx
 import { SunMoonSwitch } from 'rn-sun-moon-switch';
 
-<SunMoonSwitch />
+<SunMoonSwitch 
+  onValueChange={(isLightMode) => {
+    console.log('Theme:', isLightMode ? 'light' : 'dark');
+  }}
+/>
 ```
 
-The component manages its own internal state and provides smooth animations when toggled between day (sun) and night (moon) modes.
+### Controlled Mode (Recommended for Theme Switching)
 
-## 🎨 Customization
+Perfect for integrating with your app's theme system:
 
-Currently, the component uses default styling and animations. Customization options may be added in future versions.
+```tsx
+import React, { useState } from 'react';
+import { SunMoonSwitch } from 'rn-sun-moon-switch';
+
+function App() {
+  const [isDarkMode, setIsDarkMode] = useState(false);
+
+  return (
+    <SunMoonSwitch 
+      value={!isDarkMode}
+      onValueChange={(isLightMode) => setIsDarkMode(!isLightMode)}
+    />
+  );
+}
+```
+
+## 🎨 Props
+
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| `value` | `boolean` | `undefined` | Current value (true = light/day, false = dark/night). Makes component controlled. |
+| `onValueChange` | `(value: boolean) => void` | `undefined` | Callback fired when switch is toggled. |
+| `defaultValue` | `boolean` | `true` | Initial value for uncontrolled mode. |
+| `dayBackgroundColor` | `string` | `"#3686ef"` | Background color for light/day mode. |
+| `nightBackgroundColor` | `string` | `"#333"` | Background color for dark/night mode. |
+| `animationDuration` | `number` | `1500` | Animation duration in milliseconds. |
+| `disabled` | `boolean` | `false` | Disables user interaction. |
+| `width` | `number` | `180` | Width in pixels. Height is auto-calculated (3:1 ratio). |
+| `style` | `ViewStyle` | `undefined` | Additional style for the container. |
+| `testID` | `string` | `undefined` | Test ID for testing purposes. |
+
+## 💡 Examples
+
+### Custom Colors
+
+```tsx
+<SunMoonSwitch 
+  dayBackgroundColor="#FFD700"
+  nightBackgroundColor="#1a1a2e"
+/>
+```
+
+### Different Widths
+
+```tsx
+<SunMoonSwitch width={120} /> {/* Smaller */}
+<SunMoonSwitch width={180} /> {/* Default */}
+<SunMoonSwitch width={240} /> {/* Larger */}
+```
+
+### With Theme Context
+
+```tsx
+import { useTheme } from './ThemeContext';
+
+function ThemeSwitcher() {
+  const { isDarkMode, toggleTheme } = useTheme();
+  
+  return (
+    <SunMoonSwitch 
+      value={!isDarkMode}
+      onValueChange={toggleTheme}
+    />
+  );
+}
+```
+
+See [USAGE_EXAMPLES.md](./USAGE_EXAMPLES.md) for more detailed examples including AsyncStorage integration and React Context usage.
 
 ## 🛠️ Development
 
