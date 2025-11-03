@@ -11,6 +11,9 @@ A beautiful animated sun/moon toggle switch component for React Native, powered 
 - 🔧 Built with TypeScript
 - 🎯 Zero dependencies (peer dependencies only)
 
+![Simulator Screen Recording - iPhone 17 Pro - 2025-11-02 at 21 41 12](https://github.com/user-attachments/assets/7c43c234-90ab-4436-897a-56138545454f)
+
+
 ## 📦 Installation
 
 ```bash
